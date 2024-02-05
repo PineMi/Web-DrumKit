@@ -1,7 +1,11 @@
 // Function to play the tone of the respective Key
 function playSound(triggered_key) {
 
-    document.querySelector("." + triggered_key).classList.toggle('blinking');
+    document.querySelector("." + triggered_key).classList.add('pressed');
+
+    setTimeout(function(){
+        document.querySelector("." + triggered_key).classList.remove('pressed');            
+    },100);
 
     switch (triggered_key) {
         case "w":
@@ -34,6 +38,8 @@ function playSound(triggered_key) {
 
         default: console.log(triggered_key);
         break;
+
+        
     }
 
 }

@@ -80,15 +80,3 @@ footer {
   background-color: white;
 }
 
-.blinking {
-  animation: blinkAnimation 0.5s infinite alternate;
-}
-
-@keyframes blinkAnimation {
-  0% {
-    color: initial;
-  }
-  100% {
-    color: rgb(175, 35, 180);
-  }
-}
